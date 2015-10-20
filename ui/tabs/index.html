@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Tabs选项卡</title>
+<link href="../../css/base.css" rel="stylesheet">
+<style>
+ .main { width:500px;margin:50px auto;}
+ .tab_menu { clear:both;}
+ .tab_menu li { float:left; text-align:center; cursor:pointer; list-style:none; padding:1px 6px; margin-right:4px; background:#F1F1F1; border:1px solid #898989; border-bottom:none;}
+ .tab_menu li.current { color:#FFF; background:#6D84B4;}
+ .tab_box { clear:both; border:1px solid #898989; height:100px;}
+ .hide{display:none}
+</style>
+<script src="../../js/jquery-1.4.2.min.js"></script>
+<script src="../../js/tabs.js" type="text/javascript"></script>
+<script type="text/javascript" >
+$(function(){
+	$('.tab1').tabs();
+	$('.tab2').tabs({event:"mouseover"});
+});
+</script>
+</head>
+<body>
+<div class="main">
+<h3>click</h3>
+  <div class="tab1">
+    <div class="tab_menu">
+      <ul>
+        <li class="current">时事</li>
+        <li>体育</li>
+        <li>娱乐</li>
+      </ul>
+    </div>
+    <div class="tab_box">
+      <div>时事</div>
+      <div class="hide">体育</div>
+      <div class="hide">娱乐</div>
+    </div>
+  </div>
+  <h3>hover</h3>
+  <div class="tab2">
+    <div class="tab_menu">
+      <ul>
+        <li class="current">时事</li>
+        <li>体育</li>
+        <li>娱乐</li>
+      </ul>
+    </div>
+    <div class="tab_box">
+      <div><div>时事div</div>时事</div>
+      <div class="hide">体育</div>
+      <div class="hide">娱乐</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

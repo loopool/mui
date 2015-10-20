@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<link href="../../css/base.css" rel="stylesheet">
+<link href="../../css/style.css" rel="stylesheet">
+<style>
+.star li {
+float: left;
+width: 24px;
+cursor: pointer;
+text-indent: -9999px;
+background: url(star.png) no-repeat;
+}
+.star li.on {
+background-position: 0 -29px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="main">
+	<div class="star" id="rating">
+				<ul>
+					<li><a href="javascript:;">1</a></li>
+					<li><a href="javascript:;">2</a></li>
+					<li><a href="javascript:;">3</a></li>
+					<li><a href="javascript:;">4</a></li>
+					<li><a href="javascript:;">5</a></li>
+				</ul>
+				<span></span>
+				<input type="hidden" id="i_rating" name="rating" value="0" />
+			</div>
+</div>
+</div>
+<script src="../../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+	function bindStars(id){
+	var aLi = $("#"+id+" ul li");
+	var oSpan = $("#"+id+" span");
+	var i, iScore, result;
+	i = iScore = result = 0;
+	var aMsg = ["(Poor)","(Fair)","(Everage)","(Good)","(Excellent)"];
+
+	for (i = 1; i <= aLi.length; i++){
+		aLi[i - 1].index = i;
+		//鼠标移过显示分数
+		aLi[i - 1].onmouseover = function (){
+			fnPoint(this.index);
+			oSpan.html(aMsg[this.index - 1]);
+		};
+		//鼠标离开后恢复上次评分
+		aLi[i - 1].onmouseout = function (){
+			fnPoint();
+		};
+		//点击后进行评分处理
+		aLi[i - 1].onclick = function (){
+			result = this.index;
+			oSpan.html(aMsg[this.index - 1]);
+			$("#i_"+id).val(this.index);
+		}
+	}
+	//评分处理
+	function fnPoint(iArg){
+		iScore = iArg || result;
+		for (i = 0; i < aLi.length; i++) aLi[i].className = i < iScore ? "on" : "";
+		oSpan.html(aMsg[Number(iScore)-1]);
+		if(iScore == 0) oSpan.html('');
+	}
+	}
+bindStars("rating");
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>jquery 图片轮播插件</title>
+<link href="../../css/base.css" rel="stylesheet">
+<style type="text/css">
+.slide{ position:relative; zoom:1; overflow:hidden; width:715px;}
+.slide .slide-list{ width:10000px;}
+.slide .slide-list li{ float:left;}
+.slide .slide-list li a{ display:inline-block; zoom:1;}
+.slide .slide-nav{ position:absolute; bottom:10px; right:10px; height:10px; font-size:0;}
+.slide .slide-nav li{ cursor:pointer; display:inline-block; *display:inline; zoom:1; margin-left:3px; width:10px; height:10px; background-color:#333; font-size:12px; _overflow:hidden;}
+.slide .slide-nav .active{ background-color:#fff;}
+</style></head>
+<body style="zoom: 1;">
+<div class="container" style="padding-top: 30px; width:1200px; margin:0 auto">
+
+<h2>简单图片轮播插件<small>兼容IE6+, FF, Chrome等主流浏览器</small></h2>
+<h3>水平滚动切换</h3>
+<div class="slide slide-1">
+    <ul class="slide-list cls" >
+        <li><a href="#"><img src="images/1.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/2.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/3.jpg" alt=""></a></li>
+        <li><a href="#"><img src="images/4.jpg" alt=""></a></li>
+    </ul>
+    <ol class="slide-nav">
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class="active"></li>
+    </ol>
+</div>
+        
+<h3>淡入淡出点击切换</h3>
+<div class="slide slide-2">
+    <ul class="slide-list cls">
+        <li style="display: none;"><a href="#"><img src="images/3.jpg" alt=""></a></li>
+        <li style="display: list-item;"><a href="#"><img src="images/4.jpg" alt=""></a></li>
+        <li style="display: none;"><a href="#"><img src="images/1.jpg" alt=""></a></li>
+        <li style="display: none;"><a href="#"><img src="images/2.jpg" alt=""></a></li>
+    </ul>
+    <ol class="slide-nav">
+        <li class=""></li>
+        <li class="active"></li>
+        <li class=""></li>
+        <li class=""></li>
+    </ol>
+</div>      
+
+<h3>无特效切换切换</h3>
+<div class="slide slide-3">
+    <ul class="slide-list cls">
+        <li style="display: none;"><a href="#"><img src="images/1.jpg" alt=""></a></li>
+        <li style="display: none;"><a href="#"><img src="images/2.jpg" alt=""></a></li>
+        <li style="display: none;"><a href="#"><img src="images/3.jpg" alt=""></a></li>
+        <li style="display: list-item;"><a href="#"><img src="images/4.jpg" alt=""></a></li>
+    </ul>
+    <ol class="slide-nav">
+        <li class=""></li>
+        <li class=""></li>
+        <li class=""></li>
+        <li class="active"></li>
+    </ol>
+</div>
+
+
+
+</div>
+<script src="../../js/jquery-1.4.2.min.js"></script>
+<script src="../../js/slider.js"></script>
+<script type="text/javascript">
+    $('.slide-1').mSlide({eventType: 'click'});
+    $('.slide-2').mSlide({eventType: 'click', effect: 'fade', autoTime: '3000'});
+    $('.slide-3').mSlide({effect: 'none', autoTime: '4000'});
+</script>
+
+</body></html>
