@@ -1,5 +1,5 @@
 # mui
-MUI前端样式&常用组件
+MUI轻量级前端框架
 
 * 图片轮播 Carousel
 * 焦点图 Slider
