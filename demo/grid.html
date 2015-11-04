@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>栅格grid</title>
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+<style>
+.row { text-align: center; line-height: 2em; margin: 1% 0}
+.dark { background: #a3a3a3}
+.light {background: #f3f3f3}
+</style>
+</head>
+
+<body>
+    <div class="wrap">
+            <h1>栅格</h1>
+            <h3>基本</h3>
+            <div class="row">
+                <div class="dark col-12">12</div>
+            </div>
+            <div class="row">
+                <div class="dark col-6">6</div>
+                <div class="light col-6">6</div>
+            </div>
+            <div class="row">
+                <div class="dark col-4">4</div>
+                <div class="light col-8">8</div>
+            </div>
+            <div class="row">
+                <div class="dark col-3">3</div>
+                <div class="light col-9">9</div>
+            </div>
+            <div class="row">
+                <div class="dark col-2">2</div>
+                <div class="light col-10">10</div>
+            </div>
+            <div class="row">
+                <div class="dark col-1">1</div>
+                <div class="light col-1">1</div><div class="dark col-1">1</div>
+                <div class="light col-1">1</div><div class="dark col-1">1</div>
+                <div class="light col-1">1</div><div class="dark col-1">1</div>
+                <div class="light col-1">1</div><div class="dark col-1">1</div>
+                <div class="light col-1">1</div><div class="dark col-1">1</div>
+                <div class="light col-1">1</div>
+            </div>
+            <h3>列偏移</h3>
+            <div class="row">
+                <div class="light col-3 col-offset-3">3 offset 3</div>
+                <div class="light col-3 col-offset-3">3 offset 3</div>
+            </div>
+            <div class="row">
+                <div class="light col-3">3</div>
+                <div class="light col-3 col-offset-6">3 offset 6</div>
+            </div>
+            <h3>列嵌套</h3>
+            <div class="row">
+                <div class="light col-9">
+                9
+                <div class="row">
+                <div class="dark col-6">6</div>
+                <div class="light col-6">6</div>
+            </div>
+                </div>
+                
+            </div>
+    </div>
+</body>
+
+</html>

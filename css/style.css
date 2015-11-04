@@ -45,3 +45,31 @@ background:#fafafa;
 .form legend { display: block; width: 100%; padding: 0.3em 0; margin-bottom: 0.3em; color: #333; border-bottom: 1px solid #e5e5e5; }
 .form-stacked input[type="text"], .form-stacked input[type="password"], .form-stacked select, .form-stacked label, .form-stacked textarea { display: block; margin: 0.25em 0; }
 .form-inline input[type="text"], .form-inline input[type="password"], .form-inline select, .form-inline textarea { display:inline-block; width:auto; vertical-align:middle }
+/*Grid*/
+.row { overflow: hidden;}
+.row:after { content: ""; display: table; clear: both;}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 { float: left;}
+.col-1{width:8.33333%}
+.col-2{width:16.66667%}
+.col-3{width:25%}
+.col-4{width:33.33333%}
+.col-5{width:41.66667%}
+.col-6{width:50%}
+.col-7{width:58.33333%}
+.col-8{width:66.66667%}
+.col-9{width:75%}
+.col-10{width:83.33333%}
+.col-11{width:91.66667%}
+.col-12{width:100%}
+.col-offset-0{margin-left:0}
+.col-offset-1{margin-left:8.33333%}
+.col-offset-2{margin-left:16.66667%}
+.col-offset-3{margin-left:25%}
+.col-offset-4{margin-left:33.33333%}
+.col-offset-5{margin-left:41.66667%}
+.col-offset-6{margin-left:50%}
+.col-offset-7{margin-left:58.33333%}
+.col-offset-8{margin-left:66.66667%}
+.col-offset-9{margin-left:75%}
+.col-offset-10{margin-left:83.33333%}
+.col-offset-11{margin-left:91.66667%}
