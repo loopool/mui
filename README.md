@@ -6,6 +6,7 @@ MUI轻量级前端框架
 * [按钮](demo/button.html)
 * [表单](demo/form.html)
 * [表格](demo/table.html)
+* [栅格](demo/grid.html)
 
 ## JavaScript插件
 * [图片轮播 Carousel](ui/carousel)
