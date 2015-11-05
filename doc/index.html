@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>MUI示例</title>
+<link href="../css/mui.css" rel="stylesheet">
+<style>
+h2 { margin: 20px 0; border-bottom: 1px solid #23262D; }
+.show-grid .row { text-align: center; line-height: 2em; margin: 1% 0 }
+.dark { background: #a3a3a3 }
+.light { background: #f3f3f3 }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="main">
+    <h2>栅格</h2>
+    <h3>基本</h3>
+    <div class="show-grid">
+    <div class="row">
+      <div class="dark col-12">12</div>
+    </div>
+    <div class="row">
+      <div class="dark col-6">6</div>
+      <div class="light col-6">6</div>
+    </div>
+    <div class="row">
+      <div class="dark col-4">4</div>
+      <div class="light col-8">8</div>
+    </div>
+    <div class="row">
+      <div class="dark col-3">3</div>
+      <div class="light col-9">9</div>
+    </div>
+    <div class="row">
+      <div class="dark col-2">2</div>
+      <div class="light col-10">10</div>
+    </div>
+    <div class="row">
+      <div class="dark col-1">1</div>
+      <div class="light col-1">1</div>
+      <div class="dark col-1">1</div>
+      <div class="light col-1">1</div>
+      <div class="dark col-1">1</div>
+      <div class="light col-1">1</div>
+      <div class="dark col-1">1</div>
+      <div class="light col-1">1</div>
+      <div class="dark col-1">1</div>
+      <div class="light col-1">1</div>
+      <div class="dark col-1">1</div>
+      <div class="light col-1">1</div>
+    </div>
+    <h3>列偏移</h3>
+    <div class="row">
+      <div class="light col-3 col-offset-3">3 offset 3</div>
+      <div class="light col-3 col-offset-3">3 offset 3</div>
+    </div>
+    <div class="row">
+      <div class="light col-3">3</div>
+      <div class="light col-3 col-offset-6">3 offset 6</div>
+    </div>
+    <h3>列嵌套</h3>
+    <div class="row">
+      <div class="light col-9"> 9
+        <div class="row">
+          <div class="dark col-6">6</div>
+          <div class="light col-6">6</div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <h2>表格</h2>
+    <div class="row">
+      <table class="table col-8">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Honda</td>
+            <td>Accord</td>
+            <td>2009</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Toyota</td>
+            <td>Camry</td>
+            <td>2012</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Hyundai</td>
+            <td>Elantra</td>
+            <td>2010</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h2>按钮</h2>
+    <h3>普通按钮</h3>
+    <button type="button" class="button button-primary">（首选项）Primary</button>
+    <button type="button" class="button button-success">（成功）Success</button>
+    <button type="button" class="button button-info">（一般信息）Info</button>
+    <button type="button" class="button button-warning">（警告）Warning</button>
+    <button type="button" class="button button-danger">（危险）Danger</button>
+    <h3>块级按钮</h3>
+    <div class="row">
+      <div class="col-6">
+        <p>
+          <button type="button" class="button button-primary button-block">（首选项）Primary</button>
+        </p>
+        <p>
+          <button type="button" class="button button-success button-block">（成功）Success</button>
+        </p>
+        <p>
+          <button type="button" class="button button-info button-block">（一般信息）Info</button>
+        </p>
+        <p>
+          <button type="button" class="button button-warning button-block">（警告）Warning</button>
+        </p>
+        <p>
+          <button type="button" class="button button-danger button-block">（危险）Danger</button>
+        </p>
+      </div>
+    </div>
+    <h2>表单</h2>
+      <div style="width:50%">
+        <form class="form form-stacked">
+          <fieldset>
+            <legend>A Stacked Form</legend>
+            <label for="email">Email</label>
+            <input id="email" type="text" placeholder="Email">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
+            <label for="state">State</label>
+            <select id="state">
+              <option>AL</option>
+              <option>CA</option>
+              <option>IL</option>
+            </select>
+            <label for="remember" class="m-checkbox">
+              <input id="remember" type="checkbox">
+              Remember me </label>
+            <button type="submit" class="button button-primary">Sign in</button>
+          </fieldset>
+        </form>
+
+        <form class="form form-inline">
+          <fieldset>
+            <legend>A Inline Form</legend>
+            <label for="email">Email</label>
+            <input id="email" type="text" placeholder="Email">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
+            <button type="submit" class="button button-primary">Sign in</button>
+          </fieldset>
+        </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
