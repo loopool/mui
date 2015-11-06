@@ -1,0 +1,2 @@
+/*! mui 2015-11-06 */
+!function(a){a.fn.tabs=function(b){return this.each(function(){var c={event:"click"},d=a.extend({},c,b),e=a(this),f=a(".tab_box > div",e),g=a(".tab_menu ul li",e),h=function(a){a.addClass("current").siblings("li").removeClass("current"),f.eq(a.index()).removeClass("hide").siblings("div").addClass("hide")};g.bind(d.event,function(){h(a(this))})})}}(jQuery);
