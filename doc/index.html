@@ -2,75 +2,177 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>MUI示例</title>
+<title>MUI文档</title>
 <link href="../css/mui.css" rel="stylesheet">
 <style>
-h2 { margin: 20px 0; border-bottom: 1px solid #23262D; }
+#menu { left: 160px; margin-left: -160px; width: 160px; position: fixed; top: 0; bottom: 0; z-index: 1000; background: #222 }
+#menu li { border-bottom: 1px solid #333 }
+#menu a { display: block; padding: 0.6em 1em; text-indent: 1em; color: #ccc; }
+.caption { margin: 20px 0; border-bottom: 1px solid #ccc; }
 .show-grid .row { text-align: center; line-height: 2em; margin: 1% 0 }
 .dark { background: #a3a3a3 }
 .light { background: #f3f3f3 }
+.demo-box { border: 1px solid #eee; padding: 20px 15px; }
 </style>
 </head>
 
 <body>
 <div class="wrap">
+  <div id="menu">
+    <h1><a href="#">MUI</a></h1>
+    <ul>
+      <li><a href="#typo">排版</a></li>
+      <li><a href="#grid">栅格</a></li>
+      <li><a href="#form">表单</a></li>
+      <li><a href="#button">按钮</a></li>
+      <li><a href="#form">表格</a></li>
+    </ul>
+  </div>
   <div class="main">
-    <h2>栅格</h2>
+    <h2 class="caption">排版</h2>
+    <div class="typo">
+      <h4>标题</h4>
+      <div class="demo-box">
+        <h1>h1 标题1</h1>
+        <h2>h2 标题2</h2>
+        <h3>h3 标题3</h3>
+        <h4>h4 标题4</h4>
+        <h5>h5 标题5</h5>
+        <h6>h6 标题6</h6>
+      </div>
+      <h4>代码</h4>
+      <pre><code>&lt;h1&gt;h1 标题1&lt;/h1&gt;<br>&lt;h2&gt;h2 标题2&lt;/h2&gt;<br>&lt;h3&gt;h3 标题3&lt;/h3&gt;<br>&lt;h4&gt;h4 标题4&lt;/h4&gt;<br>&lt;h5&gt;h5 标题5&lt;/h5&gt;<br>&lt;h6&gt;h6 标题6&lt;/h6&gt;</code></pre>
+      <h4>引用</h4>
+      <blockquote> 无论走到哪里，都应该记住，过去都是假的，回忆是一条没有尽头的路，一切以往的春天都不复存在，就连那最坚韧而又狂乱的爱情归根结底也不过是一种转瞬即逝的现实。 </blockquote>
+      <h4>列表</h4>
+      <div class="demo-box">
+        <ul>
+          <li>无序列表</li>
+          <li>无序列表</li>
+          <li>无序列表</li>
+        </ul>
+        <ol>
+          <li>有序列表</li>
+          <li>有序列表</li>
+          <li>有序列表</li>
+        </ol>
+      </div>
+    </div>
+    <h2 class="caption"><a name="grid">栅格</a></h2>
     <h3>基本</h3>
     <div class="show-grid">
-    <div class="row">
-      <div class="dark col-12">12</div>
-    </div>
-    <div class="row">
-      <div class="dark col-6">6</div>
-      <div class="light col-6">6</div>
-    </div>
-    <div class="row">
-      <div class="dark col-4">4</div>
-      <div class="light col-8">8</div>
-    </div>
-    <div class="row">
-      <div class="dark col-3">3</div>
-      <div class="light col-9">9</div>
-    </div>
-    <div class="row">
-      <div class="dark col-2">2</div>
-      <div class="light col-10">10</div>
-    </div>
-    <div class="row">
-      <div class="dark col-1">1</div>
-      <div class="light col-1">1</div>
-      <div class="dark col-1">1</div>
-      <div class="light col-1">1</div>
-      <div class="dark col-1">1</div>
-      <div class="light col-1">1</div>
-      <div class="dark col-1">1</div>
-      <div class="light col-1">1</div>
-      <div class="dark col-1">1</div>
-      <div class="light col-1">1</div>
-      <div class="dark col-1">1</div>
-      <div class="light col-1">1</div>
-    </div>
-    <h3>列偏移</h3>
-    <div class="row">
-      <div class="light col-3 col-offset-3">3 offset 3</div>
-      <div class="light col-3 col-offset-3">3 offset 3</div>
-    </div>
-    <div class="row">
-      <div class="light col-3">3</div>
-      <div class="light col-3 col-offset-6">3 offset 6</div>
-    </div>
-    <h3>列嵌套</h3>
-    <div class="row">
-      <div class="light col-9"> 9
-        <div class="row">
-          <div class="dark col-6">6</div>
-          <div class="light col-6">6</div>
+      <div class="row">
+        <div class="dark col-12">12</div>
+      </div>
+      <div class="row">
+        <div class="dark col-6">6</div>
+        <div class="light col-6">6</div>
+      </div>
+      <div class="row">
+        <div class="dark col-4">4</div>
+        <div class="light col-8">8</div>
+      </div>
+      <div class="row">
+        <div class="dark col-3">3</div>
+        <div class="light col-9">9</div>
+      </div>
+      <div class="row">
+        <div class="dark col-2">2</div>
+        <div class="light col-10">10</div>
+      </div>
+      <div class="row">
+        <div class="dark col-1">1</div>
+        <div class="light col-1">1</div>
+        <div class="dark col-1">1</div>
+        <div class="light col-1">1</div>
+        <div class="dark col-1">1</div>
+        <div class="light col-1">1</div>
+        <div class="dark col-1">1</div>
+        <div class="light col-1">1</div>
+        <div class="dark col-1">1</div>
+        <div class="light col-1">1</div>
+        <div class="dark col-1">1</div>
+        <div class="light col-1">1</div>
+      </div>
+      <h3>列偏移</h3>
+      <div class="row">
+        <div class="light col-3 col-offset-3">3 offset 3</div>
+        <div class="light col-3 col-offset-3">3 offset 3</div>
+      </div>
+      <div class="row">
+        <div class="light col-3">3</div>
+        <div class="light col-3 col-offset-6">3 offset 6</div>
+      </div>
+      <h3>列嵌套</h3>
+      <div class="row">
+        <div class="light col-9"> 9
+          <div class="row">
+            <div class="dark col-6">6</div>
+            <div class="light col-6">6</div>
+          </div>
         </div>
       </div>
     </div>
+    <h2 class="caption"><a name="form">表单</a></h2>
+    <div style="width:66%">
+      <form class="form form-stacked">
+        <fieldset>
+          <legend>A Stacked Form</legend>
+          <label for="email">Email</label>
+          <input id="email" type="text" placeholder="Email">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Password">
+          <label for="state">State</label>
+          <select id="state">
+            <option>AL</option>
+            <option>CA</option>
+            <option>IL</option>
+          </select>
+          <label for="remember" class="m-checkbox">
+            <input id="remember" type="checkbox">
+            Remember me </label>
+          <button type="submit" class="button button-primary">Sign in</button>
+        </fieldset>
+      </form>
+      <form class="form form-inline">
+        <fieldset>
+          <legend>A Inline Form</legend>
+          <label for="email">Email</label>
+          <input id="email" type="text" placeholder="Email">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Password">
+          <button type="submit" class="button button-primary">Sign in</button>
+        </fieldset>
+      </form>
     </div>
-    <h2>表格</h2>
+    <h2><a name="button">按钮</a></h2>
+    <h3>普通按钮</h3>
+    <button type="button" class="button button-primary">（首选项）Primary</button>
+    <button type="button" class="button button-success">（成功）Success</button>
+    <button type="button" class="button button-info">（一般信息）Info</button>
+    <button type="button" class="button button-warning">（警告）Warning</button>
+    <button type="button" class="button button-danger">（危险）Danger</button>
+    <h3>块级按钮</h3>
+    <div class="row">
+      <div class="col-6">
+        <p>
+          <button type="button" class="button button-primary button-block">（首选项）Primary</button>
+        </p>
+        <p>
+          <button type="button" class="button button-success button-block">（成功）Success</button>
+        </p>
+        <p>
+          <button type="button" class="button button-info button-block">（一般信息）Info</button>
+        </p>
+        <p>
+          <button type="button" class="button button-warning button-block">（警告）Warning</button>
+        </p>
+        <p>
+          <button type="button" class="button button-danger button-block">（危险）Danger</button>
+        </p>
+      </div>
+    </div>
+    <h2 class="caption"><a name="table">表格</a></h2>
     <div class="row">
       <table class="table col-8">
         <thead>
@@ -102,66 +204,6 @@ h2 { margin: 20px 0; border-bottom: 1px solid #23262D; }
           </tr>
         </tbody>
       </table>
-    </div>
-    <h2>按钮</h2>
-    <h3>普通按钮</h3>
-    <button type="button" class="button button-primary">（首选项）Primary</button>
-    <button type="button" class="button button-success">（成功）Success</button>
-    <button type="button" class="button button-info">（一般信息）Info</button>
-    <button type="button" class="button button-warning">（警告）Warning</button>
-    <button type="button" class="button button-danger">（危险）Danger</button>
-    <h3>块级按钮</h3>
-    <div class="row">
-      <div class="col-6">
-        <p>
-          <button type="button" class="button button-primary button-block">（首选项）Primary</button>
-        </p>
-        <p>
-          <button type="button" class="button button-success button-block">（成功）Success</button>
-        </p>
-        <p>
-          <button type="button" class="button button-info button-block">（一般信息）Info</button>
-        </p>
-        <p>
-          <button type="button" class="button button-warning button-block">（警告）Warning</button>
-        </p>
-        <p>
-          <button type="button" class="button button-danger button-block">（危险）Danger</button>
-        </p>
-      </div>
-    </div>
-    <h2>表单</h2>
-      <div style="width:50%">
-        <form class="form form-stacked">
-          <fieldset>
-            <legend>A Stacked Form</legend>
-            <label for="email">Email</label>
-            <input id="email" type="text" placeholder="Email">
-            <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Password">
-            <label for="state">State</label>
-            <select id="state">
-              <option>AL</option>
-              <option>CA</option>
-              <option>IL</option>
-            </select>
-            <label for="remember" class="m-checkbox">
-              <input id="remember" type="checkbox">
-              Remember me </label>
-            <button type="submit" class="button button-primary">Sign in</button>
-          </fieldset>
-        </form>
-
-        <form class="form form-inline">
-          <fieldset>
-            <legend>A Inline Form</legend>
-            <label for="email">Email</label>
-            <input id="email" type="text" placeholder="Email">
-            <label for="password">Password</label>
-            <input id="password" type="password" placeholder="Password">
-            <button type="submit" class="button button-primary">Sign in</button>
-          </fieldset>
-        </form>
     </div>
   </div>
 </div>
